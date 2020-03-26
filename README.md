@@ -1,1 +1,1 @@
-此项目是springboot的样板项目，集合了mysql,mybatis,日志
+此项目是springboot的脚手架项目，集合了多数据源，mybatis,kafka,aliyun云效自动化构建和部署

@@ -1,0 +1,243 @@
+===2020-03-23 18:15:22.614 INFO  com.qiqilab.web.CardWebApplication Line:55  - Starting CardWebApplication v0.0.1-SNAPSHOT on DESKTOP-Q30U1R2 with PID 14068 (E:\source\ideaSource\vector-card\card-web\target\card-web.jar started by Dave in E:\source\ideaSource\vector-card\card-web\target)
+===2020-03-23 18:15:22.616 INFO  com.qiqilab.web.CardWebApplication Line:655 - The following profiles are active: dev
+===2020-03-23 18:15:23.038 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+===2020-03-23 18:15:23.040 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+===2020-03-23 18:15:23.053 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:182 - Finished Spring Data repository scanning in 4ms. Found 0 repository interfaces.
+===2020-03-23 18:15:23.288 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:15:23.315 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:15:23.317 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$80b3915b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:15:23.328 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'dynamicDataSourceSpelParser' of type [com.baomidou.dynamic.datasource.spel.DefaultDynamicDataSourceSpelParser] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:15:23.330 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'dynamicDataSourceSpelResolver' of type [com.baomidou.dynamic.datasource.spel.DefaultDynamicDataSourceSpelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:15:23.333 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:15:23.793 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:92  - Tomcat initialized with port(s): 8081 (http)
+===2020-03-23 18:15:23.802 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+===2020-03-23 18:15:23.803 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+===2020-03-23 18:15:23.803 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.27]
+===2020-03-23 18:15:24.170 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+===2020-03-23 18:15:24.170 INFO  org.springframework.web.context.ContextLoader Line:284 - Root WebApplicationContext: initialization completed in 1519 ms
+===2020-03-23 18:15:24.211 INFO  org.apache.catalina.core.StandardService Line:173 - Stopping service [Tomcat]
+===2020-03-23 18:15:24.223 INFO  org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener Line:136 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+===2020-03-23 18:29:46.783 INFO  com.qiqilab.web.CardWebApplication Line:55  - Starting CardWebApplication v0.0.1-SNAPSHOT on DESKTOP-Q30U1R2 with PID 10572 (E:\source\ideaSource\vector-card\card-web\target\card-web.jar started by Dave in E:\source\ideaSource\vector-card\card-web\target)
+===2020-03-23 18:29:46.786 INFO  com.qiqilab.web.CardWebApplication Line:655 - The following profiles are active: dev
+===2020-03-23 18:29:47.231 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:244 - Multiple Spring Data modules found, entering strict repository configuration mode!
+===2020-03-23 18:29:47.233 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:126 - Bootstrapping Spring Data repositories in DEFAULT mode.
+===2020-03-23 18:29:47.245 INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate Line:182 - Finished Spring Data repository scanning in 3ms. Found 0 repository interfaces.
+===2020-03-23 18:29:47.476 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:29:47.500 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'spring.datasource.dynamic-com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:29:47.502 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration' of type [com.baomidou.dynamic.datasource.spring.boot.autoconfigure.DynamicDataSourceAutoConfiguration$$EnhancerBySpringCGLIB$$f2fcda9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:29:47.511 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'dynamicDataSourceSpelParser' of type [com.baomidou.dynamic.datasource.spel.DefaultDynamicDataSourceSpelParser] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:29:47.512 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'dynamicDataSourceSpelResolver' of type [com.baomidou.dynamic.datasource.spel.DefaultDynamicDataSourceSpelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:29:47.515 INFO  org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker Line:330 - Bean 'dynamicDatasourceAnnotationAdvisor' of type [com.baomidou.dynamic.datasource.aop.DynamicDataSourceAnnotationAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+===2020-03-23 18:29:47.951 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:92  - Tomcat initialized with port(s): 8081 (http)
+===2020-03-23 18:29:47.960 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Initializing ProtocolHandler ["http-nio-8081"]
+===2020-03-23 18:29:47.961 INFO  org.apache.catalina.core.StandardService Line:173 - Starting service [Tomcat]
+===2020-03-23 18:29:47.961 INFO  org.apache.catalina.core.StandardEngine Line:173 - Starting Servlet engine: [Apache Tomcat/9.0.27]
+===2020-03-23 18:29:48.078 INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] Line:173 - Initializing Spring embedded WebApplicationContext
+===2020-03-23 18:29:48.079 INFO  org.springframework.web.context.ContextLoader Line:284 - Root WebApplicationContext: initialization completed in 1232 ms
+===2020-03-23 18:29:48.133 INFO  com.zaxxer.hikari.HikariDataSource Line:80  - master - Starting...
+===2020-03-23 18:29:48.622 INFO  com.zaxxer.hikari.HikariDataSource Line:82  - master - Start completed.
+===2020-03-23 18:29:48.622 INFO  com.zaxxer.hikari.HikariDataSource Line:80  - slave_1 - Starting...
+===2020-03-23 18:29:48.958 INFO  com.zaxxer.hikari.HikariDataSource Line:82  - slave_1 - Start completed.
+===2020-03-23 18:29:48.959 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource Line:153 - 初始共加载 2 个数据源
+===2020-03-23 18:29:48.959 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource Line:127 - 动态数据源-加载 master 成功
+===2020-03-23 18:29:48.962 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource Line:127 - 动态数据源-加载 slave_1 成功
+===2020-03-23 18:29:48.962 INFO  com.baomidou.dynamic.datasource.DynamicRoutingDataSource Line:162 - 当前的默认数据源是单数据源，数据源名为 master
+===2020-03-23 18:29:49.567 INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:171 - Initializing ExecutorService 'applicationTaskExecutor'
+===2020-03-23 18:29:49.803 INFO  org.apache.kafka.clients.admin.AdminClientConfig Line:347 - AdminClientConfig values: 
+	bootstrap.servers = [VM_0_3_centos:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+===2020-03-23 18:29:49.901 INFO  org.apache.kafka.common.utils.AppInfoParser Line:117 - Kafka version: 2.3.0
+===2020-03-23 18:29:49.901 INFO  org.apache.kafka.common.utils.AppInfoParser Line:118 - Kafka commitId: fc1aaa116b661c8a
+===2020-03-23 18:29:49.901 INFO  org.apache.kafka.common.utils.AppInfoParser Line:119 - Kafka startTimeMs: 1584959389900
+===2020-03-23 18:29:50.123 INFO  org.apache.kafka.clients.admin.AdminClientConfig Line:347 - AdminClientConfig values: 
+	bootstrap.servers = [VM_0_3_centos:9092]
+	client.dns.lookup = default
+	client.id = 
+	connections.max.idle.ms = 300000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 120000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+===2020-03-23 18:29:50.126 INFO  org.apache.kafka.common.utils.AppInfoParser Line:117 - Kafka version: 2.3.0
+===2020-03-23 18:29:50.126 INFO  org.apache.kafka.common.utils.AppInfoParser Line:118 - Kafka commitId: fc1aaa116b661c8a
+===2020-03-23 18:29:50.126 INFO  org.apache.kafka.common.utils.AppInfoParser Line:119 - Kafka startTimeMs: 1584959390126
+===2020-03-23 18:29:50.293 INFO  org.apache.kafka.clients.consumer.ConsumerConfig Line:347 - ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 100
+	auto.offset.reset = earliest
+	bootstrap.servers = [VM_0_3_centos:9092]
+	check.crcs = true
+	client.dns.lookup = default
+	client.id = 
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = true
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = qiqilab
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.1, TLSv1]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLS
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+===2020-03-23 18:29:50.321 INFO  org.apache.kafka.common.utils.AppInfoParser Line:117 - Kafka version: 2.3.0
+===2020-03-23 18:29:50.321 INFO  org.apache.kafka.common.utils.AppInfoParser Line:118 - Kafka commitId: fc1aaa116b661c8a
+===2020-03-23 18:29:50.322 INFO  org.apache.kafka.common.utils.AppInfoParser Line:119 - Kafka startTimeMs: 1584959390321
+===2020-03-23 18:29:50.323 INFO  org.apache.kafka.clients.consumer.KafkaConsumer Line:964 - [Consumer clientId=consumer-1, groupId=qiqilab] Subscribed to topic(s): yinshan_credence
+===2020-03-23 18:29:50.324 INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Line:171 - Initializing ExecutorService
+===2020-03-23 18:29:50.333 INFO  org.apache.coyote.http11.Http11NioProtocol Line:173 - Starting ProtocolHandler ["http-nio-8081"]
+===2020-03-23 18:29:50.345 INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer Line:204 - Tomcat started on port(s): 8081 (http) with context path ''
+===2020-03-23 18:29:50.347 INFO  com.qiqilab.web.CardWebApplication Line:61  - Started CardWebApplication in 3.917 seconds (JVM running for 4.226)
+===2020-03-23 18:29:50.394 INFO  org.apache.kafka.clients.Metadata Line:266 - [Consumer clientId=consumer-1, groupId=qiqilab] Cluster ID: K2b3dOuHSy-T2-QCNW-rpw
+===2020-03-23 18:29:50.395 INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator Line:728 - [Consumer clientId=consumer-1, groupId=qiqilab] Discovered group coordinator VM_0_3_centos:9092 (id: 2147483647 rack: null)
+===2020-03-23 18:29:50.397 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator Line:476 - [Consumer clientId=consumer-1, groupId=qiqilab] Revoking previously assigned partitions []
+===2020-03-23 18:29:50.397 INFO  org.springframework.kafka.listener.KafkaMessageListenerContainer Line:279 - qiqilab: partitions revoked: []
+===2020-03-23 18:29:50.397 INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator Line:505 - [Consumer clientId=consumer-1, groupId=qiqilab] (Re-)joining group
+===2020-03-23 18:29:50.454 INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator Line:505 - [Consumer clientId=consumer-1, groupId=qiqilab] (Re-)joining group
+===2020-03-23 18:29:50.497 INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator Line:469 - [Consumer clientId=consumer-1, groupId=qiqilab] Successfully joined group with generation 21
+===2020-03-23 18:29:50.501 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator Line:283 - [Consumer clientId=consumer-1, groupId=qiqilab] Setting newly assigned partitions: yinshan_credence-0
+===2020-03-23 18:29:50.525 INFO  org.apache.kafka.clients.consumer.internals.ConsumerCoordinator Line:525 - [Consumer clientId=consumer-1, groupId=qiqilab] Setting offset for partition yinshan_credence-0 to the committed offset FetchPosition{offset=38, offsetEpoch=Optional[3], currentLeader=LeaderAndEpoch{leader=VM_0_3_centos:9092 (id: 0 rack: null), epoch=3}}
+===2020-03-23 18:29:50.583 INFO  org.springframework.kafka.listener.KafkaMessageListenerContainer Line:279 - qiqilab: partitions assigned: [yinshan_credence-0]
+===2020-03-23 18:29:55.305 INFO  org.apache.kafka.clients.consumer.internals.AbstractCoordinator Line:879 - [Consumer clientId=consumer-1, groupId=qiqilab] Member consumer-1-73c8be15-b9d1-4b1c-9d06-66d865546582 sending LeaveGroup request to coordinator VM_0_3_centos:9092 (id: 2147483647 rack: null)
+===2020-03-23 18:29:55.305 INFO  org.apache.kafka.clients.consumer.KafkaConsumer Line:1068 - [Consumer clientId=consumer-1, groupId=qiqilab] Unsubscribed all topics or patterns and assigned partitions
+===2020-03-23 18:29:55.305 INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler Line:208 - Shutting down ExecutorService
+===2020-03-23 18:29:55.327 INFO  org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer Line:279 - qiqilab: Consumer stopped
+===2020-03-23 18:29:55.328 INFO  org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor Line:208 - Shutting down ExecutorService 'applicationTaskExecutor'

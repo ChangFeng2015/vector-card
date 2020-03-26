@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qiqilab.dao.CredenceMapper">
+    <resultMap id="BaseResultMap" type="com.qiqilab.entity.Credence">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
+        <result column="code" jdbcType="VARCHAR" property="code"/>
+        <result column="credence_name" jdbcType="VARCHAR" property="credenceName"/>
+        <result column="credence_type" jdbcType="VARCHAR" property="credenceType"/>
+        <result column="credence_type_value" jdbcType="VARCHAR" property="credenceTypeValue"/>
+        <result column="shop_code" jdbcType="VARCHAR" property="shopCode"/>
+        <result column="shop_name" jdbcType="VARCHAR" property="shopName"/>
+        <result column="head_shop_code" jdbcType="VARCHAR" property="headShopCode"/>
+        <result column="shop_id" jdbcType="BIGINT" property="shopId"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="amount" jdbcType="DECIMAL" property="amount"/>
+        <result column="score_amount" jdbcType="INTEGER" property="scoreAmount"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="user_name" jdbcType="VARCHAR" property="userName"/>
+        <result column="user_code" jdbcType="VARCHAR" property="userCode"/>
+        <result column="cashier_user_id" jdbcType="BIGINT" property="cashierUserId"/>
+        <result column="cashier_user_code" jdbcType="VARCHAR" property="cashierUserCode"/>
+        <result column="cashier_user_name" jdbcType="VARCHAR" property="cashierUserName"/>
+        <result column="cashier_telephone" jdbcType="VARCHAR" property="cashierTelephone"/>
+        <result column="consume_code" jdbcType="VARCHAR" property="consumeCode"/>
+        <result column="cash_pay_money" jdbcType="DECIMAL" property="cashPayMoney"/>
+        <result column="score_pay_money" jdbcType="DECIMAL" property="scorePayMoney"/>
+        <result column="bonus_pay_money" jdbcType="DECIMAL" property="bonusPayMoney"/>
+        <result column="virtual_pay_money" jdbcType="DECIMAL" property="virtualPayMoney"/>
+        <result column="pay_score" jdbcType="INTEGER" property="payScore"/>
+        <result column="pay_bonus_codes" jdbcType="VARCHAR" property="payBonusCodes"/>
+        <result column="score_bank_code" jdbcType="VARCHAR" property="scoreBankCode"/>
+        <result column="num" jdbcType="INTEGER" property="num"/>
+        <result column="pay_time" jdbcType="TIMESTAMP" property="payTime"/>
+        <result column="delete_time" jdbcType="TIMESTAMP" property="deleteTime"/>
+        <result column="vaccount_code" jdbcType="VARCHAR" property="vaccountCode"/>
+        <result column="check_value" jdbcType="VARCHAR" property="checkValue"/>
+        <result column="trade_no" jdbcType="VARCHAR" property="tradeNo"/>
+        <result column="tran_date" jdbcType="TIMESTAMP" property="tranDate"/>
+        <result column="service_fee" jdbcType="DECIMAL" property="serviceFee"/>
+        <result column="service_fee_return" jdbcType="DECIMAL" property="serviceFeeReturn"/>
+        <result column="account_code" jdbcType="VARCHAR" property="accountCode"/>
+        <result column="refund_type" jdbcType="VARCHAR" property="refundType"/>
+        <result column="refund_type_value" jdbcType="VARCHAR" property="refundTypeValue"/>
+        <result column="pay_channel" jdbcType="VARCHAR" property="payChannel"/>
+        <result column="pay_channel_value" jdbcType="VARCHAR" property="payChannelValue"/>
+        <result column="is_invoice" jdbcType="CHAR" property="isInvoice"/>
+        <result column="is_make_invoice" jdbcType="CHAR" property="isMakeInvoice"/>
+        <result column="error_serial_no" jdbcType="VARCHAR" property="errorSerialNo"/>
+        <result column="error_reason" jdbcType="VARCHAR" property="errorReason"/>
+        <result column="check_status" jdbcType="VARCHAR" property="checkStatus"/>
+        <result column="check_status_value" jdbcType="VARCHAR" property="checkStatusValue"/>
+        <result column="check_time" jdbcType="TIMESTAMP" property="checkTime"/>
+        <result column="credence_category" jdbcType="VARCHAR" property="credenceCategory"/>
+        <result column="credence_category_value" jdbcType="VARCHAR" property="credenceCategoryValue"/>
+        <result column="is_cancel" jdbcType="CHAR" property="isCancel"/>
+        <result column="cancel_time" jdbcType="TIMESTAMP" property="cancelTime"/>
+        <result column="is_transfer" jdbcType="VARCHAR" property="isTransfer"/>
+        <result column="transfer_time" jdbcType="TIMESTAMP" property="transferTime"/>
+        <result column="is_compensation" jdbcType="VARCHAR" property="isCompensation"/>
+        <result column="bank_code" jdbcType="VARCHAR" property="bankCode"/>
+        <result column="pf_bonus_pay_money" jdbcType="DECIMAL" property="pfBonusPayMoney"/>
+        <result column="pf_bonus_codes" jdbcType="VARCHAR" property="pfBonusCodes"/>
+        <result column="subsidy_pay_money" jdbcType="DECIMAL" property="subsidyPayMoney"/>
+        <result column="is_refund" jdbcType="CHAR" property="isRefund"/>
+        <result column="refund_time" jdbcType="TIMESTAMP" property="refundTime"/>
+        <result column="interest_pay_money" jdbcType="DECIMAL" property="interestPayMoney"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, version, code, credence_name, credence_type, credence_type_value, shop_code, 
+    shop_name, head_shop_code, shop_id, create_time, amount, score_amount, user_id, user_name, 
+    user_code, cashier_user_id, cashier_user_code, cashier_user_name, cashier_telephone, 
+    consume_code, cash_pay_money, score_pay_money, bonus_pay_money, virtual_pay_money, 
+    pay_score, pay_bonus_codes, score_bank_code, num, pay_time, delete_time, vaccount_code, 
+    check_value, trade_no, tran_date, service_fee, service_fee_return, account_code, 
+    refund_type, refund_type_value, pay_channel, pay_channel_value, is_invoice, is_make_invoice, 
+    error_serial_no, error_reason, check_status, check_status_value, check_time, credence_category, 
+    credence_category_value, is_cancel, cancel_time, is_transfer, transfer_time, is_compensation, 
+    bank_code, pf_bonus_pay_money, pf_bonus_codes, subsidy_pay_money, is_refund, refund_time, 
+    interest_pay_money
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from credence
+        where id = #{id,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from credence
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+    <insert id="insert" parameterType="com.qiqilab.entity.Credence">
+    insert into credence (id, version, code, 
+      credence_name, credence_type, credence_type_value, 
+      shop_code, shop_name, head_shop_code, 
+      shop_id, create_time, amount, 
+      score_amount, user_id, user_name, 
+      user_code, cashier_user_id, cashier_user_code, 
+      cashier_user_name, cashier_telephone, consume_code, 
+      cash_pay_money, score_pay_money, bonus_pay_money, 
+      virtual_pay_money, pay_score, pay_bonus_codes, 
+      score_bank_code, num, pay_time, 
+      delete_time, vaccount_code, check_value, 
+      trade_no, tran_date, service_fee, 
+      service_fee_return, account_code, refund_type, 
+      refund_type_value, pay_channel, pay_channel_value, 
+      is_invoice, is_make_invoice, error_serial_no, 
+      error_reason, check_status, check_status_value, 
+      check_time, credence_category, credence_category_value, 
+      is_cancel, cancel_time, is_transfer, 
+      transfer_time, is_compensation, bank_code, 
+      pf_bonus_pay_money, pf_bonus_codes, subsidy_pay_money, 
+      is_refund, refund_time, interest_pay_money
+      )
+    values (#{id,jdbcType=BIGINT}, #{version,jdbcType=INTEGER}, #{code,jdbcType=VARCHAR}, 
+      #{credenceName,jdbcType=VARCHAR}, #{credenceType,jdbcType=VARCHAR}, #{credenceTypeValue,jdbcType=VARCHAR}, 
+      #{shopCode,jdbcType=VARCHAR}, #{shopName,jdbcType=VARCHAR}, #{headShopCode,jdbcType=VARCHAR}, 
+      #{shopId,jdbcType=BIGINT}, #{createTime,jdbcType=TIMESTAMP}, #{amount,jdbcType=DECIMAL}, 
+      #{scoreAmount,jdbcType=INTEGER}, #{userId,jdbcType=BIGINT}, #{userName,jdbcType=VARCHAR}, 
+      #{userCode,jdbcType=VARCHAR}, #{cashierUserId,jdbcType=BIGINT}, #{cashierUserCode,jdbcType=VARCHAR}, 
+      #{cashierUserName,jdbcType=VARCHAR}, #{cashierTelephone,jdbcType=VARCHAR}, #{consumeCode,jdbcType=VARCHAR}, 
+      #{cashPayMoney,jdbcType=DECIMAL}, #{scorePayMoney,jdbcType=DECIMAL}, #{bonusPayMoney,jdbcType=DECIMAL}, 
+      #{virtualPayMoney,jdbcType=DECIMAL}, #{payScore,jdbcType=INTEGER}, #{payBonusCodes,jdbcType=VARCHAR}, 
+      #{scoreBankCode,jdbcType=VARCHAR}, #{num,jdbcType=INTEGER}, #{payTime,jdbcType=TIMESTAMP}, 
+      #{deleteTime,jdbcType=TIMESTAMP}, #{vaccountCode,jdbcType=VARCHAR}, #{checkValue,jdbcType=VARCHAR}, 
+      #{tradeNo,jdbcType=VARCHAR}, #{tranDate,jdbcType=TIMESTAMP}, #{serviceFee,jdbcType=DECIMAL}, 
+      #{serviceFeeReturn,jdbcType=DECIMAL}, #{accountCode,jdbcType=VARCHAR}, #{refundType,jdbcType=VARCHAR}, 
+      #{refundTypeValue,jdbcType=VARCHAR}, #{payChannel,jdbcType=VARCHAR}, #{payChannelValue,jdbcType=VARCHAR}, 
+      #{isInvoice,jdbcType=CHAR}, #{isMakeInvoice,jdbcType=CHAR}, #{errorSerialNo,jdbcType=VARCHAR}, 
+      #{errorReason,jdbcType=VARCHAR}, #{checkStatus,jdbcType=VARCHAR}, #{checkStatusValue,jdbcType=VARCHAR}, 
+      #{checkTime,jdbcType=TIMESTAMP}, #{credenceCategory,jdbcType=VARCHAR}, #{credenceCategoryValue,jdbcType=VARCHAR}, 
+      #{isCancel,jdbcType=CHAR}, #{cancelTime,jdbcType=TIMESTAMP}, #{isTransfer,jdbcType=VARCHAR}, 
+      #{transferTime,jdbcType=TIMESTAMP}, #{isCompensation,jdbcType=VARCHAR}, #{bankCode,jdbcType=VARCHAR}, 
+      #{pfBonusPayMoney,jdbcType=DECIMAL}, #{pfBonusCodes,jdbcType=VARCHAR}, #{subsidyPayMoney,jdbcType=DECIMAL}, 
+      #{isRefund,jdbcType=CHAR}, #{refundTime,jdbcType=TIMESTAMP}, #{interestPayMoney,jdbcType=DECIMAL}
+      )
+  </insert>
+    <insert id="insertSelective" parameterType="com.qiqilab.entity.Credence">
+        insert into credence
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="version != null">
+                version,
+            </if>
+            <if test="code != null">
+                code,
+            </if>
+            <if test="credenceName != null">
+                credence_name,
+            </if>
+            <if test="credenceType != null">
+                credence_type,
+            </if>
+            <if test="credenceTypeValue != null">
+                credence_type_value,
+            </if>
+            <if test="shopCode != null">
+                shop_code,
+            </if>
+            <if test="shopName != null">
+                shop_name,
+            </if>
+            <if test="headShopCode != null">
+                head_shop_code,
+            </if>
+            <if test="shopId != null">
+                shop_id,
+            </if>
+            <if test="createTime != null">
+                create_time,
+            </if>
+            <if test="amount != null">
+                amount,
+            </if>
+            <if test="scoreAmount != null">
+                score_amount,
+            </if>
+            <if test="userId != null">
+                user_id,
+            </if>
+            <if test="userName != null">
+                user_name,
+            </if>
+            <if test="userCode != null">
+                user_code,
+            </if>
+            <if test="cashierUserId != null">
+                cashier_user_id,
+            </if>
+            <if test="cashierUserCode != null">
+                cashier_user_code,
+            </if>
+            <if test="cashierUserName != null">
+                cashier_user_name,
+            </if>
+            <if test="cashierTelephone != null">
+                cashier_telephone,
+            </if>
+            <if test="consumeCode != null">
+                consume_code,
+            </if>
+            <if test="cashPayMoney != null">
+                cash_pay_money,
+            </if>
+            <if test="scorePayMoney != null">
+                score_pay_money,
+            </if>
+            <if test="bonusPayMoney != null">
+                bonus_pay_money,
+            </if>
+            <if test="virtualPayMoney != null">
+                virtual_pay_money,
+            </if>
+            <if test="payScore != null">
+                pay_score,
+            </if>
+            <if test="payBonusCodes != null">
+                pay_bonus_codes,
+            </if>
+            <if test="scoreBankCode != null">
+                score_bank_code,
+            </if>
+            <if test="num != null">
+                num,
+            </if>
+            <if test="payTime != null">
+                pay_time,
+            </if>
+            <if test="deleteTime != null">
+                delete_time,
+            </if>
+            <if test="vaccountCode != null">
+                vaccount_code,
+            </if>
+            <if test="checkValue != null">
+                check_value,
+            </if>
+            <if test="tradeNo != null">
+                trade_no,
+            </if>
+            <if test="tranDate != null">
+                tran_date,
+            </if>
+            <if test="serviceFee != null">
+                service_fee,
+            </if>
+            <if test="serviceFeeReturn != null">
+                service_fee_return,
+            </if>
+            <if test="accountCode != null">
+                account_code,
+            </if>
+            <if test="refundType != null">
+                refund_type,
+            </if>
+            <if test="refundTypeValue != null">
+                refund_type_value,
+            </if>
+            <if test="payChannel != null">
+                pay_channel,
+            </if>
+            <if test="payChannelValue != null">
+                pay_channel_value,
+            </if>
+            <if test="isInvoice != null">
+                is_invoice,
+            </if>
+            <if test="isMakeInvoice != null">
+                is_make_invoice,
+            </if>
+            <if test="errorSerialNo != null">
+                error_serial_no,
+            </if>
+            <if test="errorReason != null">
+                error_reason,
+            </if>
+            <if test="checkStatus != null">
+                check_status,
+            </if>
+            <if test="checkStatusValue != null">
+                check_status_value,
+            </if>
+            <if test="checkTime != null">
+                check_time,
+            </if>
+            <if test="credenceCategory != null">
+                credence_category,
+            </if>
+            <if test="credenceCategoryValue != null">
+                credence_category_value,
+            </if>
+            <if test="isCancel != null">
+                is_cancel,
+            </if>
+            <if test="cancelTime != null">
+                cancel_time,
+            </if>
+            <if test="isTransfer != null">
+                is_transfer,
+            </if>
+            <if test="transferTime != null">
+                transfer_time,
+            </if>
+            <if test="isCompensation != null">
+                is_compensation,
+            </if>
+            <if test="bankCode != null">
+                bank_code,
+            </if>
+            <if test="pfBonusPayMoney != null">
+                pf_bonus_pay_money,
+            </if>
+            <if test="pfBonusCodes != null">
+                pf_bonus_codes,
+            </if>
+            <if test="subsidyPayMoney != null">
+                subsidy_pay_money,
+            </if>
+            <if test="isRefund != null">
+                is_refund,
+            </if>
+            <if test="refundTime != null">
+                refund_time,
+            </if>
+            <if test="interestPayMoney != null">
+                interest_pay_money,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=BIGINT},
+            </if>
+            <if test="version != null">
+                #{version,jdbcType=INTEGER},
+            </if>
+            <if test="code != null">
+                #{code,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceName != null">
+                #{credenceName,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceType != null">
+                #{credenceType,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceTypeValue != null">
+                #{credenceTypeValue,jdbcType=VARCHAR},
+            </if>
+            <if test="shopCode != null">
+                #{shopCode,jdbcType=VARCHAR},
+            </if>
+            <if test="shopName != null">
+                #{shopName,jdbcType=VARCHAR},
+            </if>
+            <if test="headShopCode != null">
+                #{headShopCode,jdbcType=VARCHAR},
+            </if>
+            <if test="shopId != null">
+                #{shopId,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="amount != null">
+                #{amount,jdbcType=DECIMAL},
+            </if>
+            <if test="scoreAmount != null">
+                #{scoreAmount,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="userName != null">
+                #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="userCode != null">
+                #{userCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cashierUserId != null">
+                #{cashierUserId,jdbcType=BIGINT},
+            </if>
+            <if test="cashierUserCode != null">
+                #{cashierUserCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cashierUserName != null">
+                #{cashierUserName,jdbcType=VARCHAR},
+            </if>
+            <if test="cashierTelephone != null">
+                #{cashierTelephone,jdbcType=VARCHAR},
+            </if>
+            <if test="consumeCode != null">
+                #{consumeCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cashPayMoney != null">
+                #{cashPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="scorePayMoney != null">
+                #{scorePayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="bonusPayMoney != null">
+                #{bonusPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="virtualPayMoney != null">
+                #{virtualPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="payScore != null">
+                #{payScore,jdbcType=INTEGER},
+            </if>
+            <if test="payBonusCodes != null">
+                #{payBonusCodes,jdbcType=VARCHAR},
+            </if>
+            <if test="scoreBankCode != null">
+                #{scoreBankCode,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                #{num,jdbcType=INTEGER},
+            </if>
+            <if test="payTime != null">
+                #{payTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteTime != null">
+                #{deleteTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="vaccountCode != null">
+                #{vaccountCode,jdbcType=VARCHAR},
+            </if>
+            <if test="checkValue != null">
+                #{checkValue,jdbcType=VARCHAR},
+            </if>
+            <if test="tradeNo != null">
+                #{tradeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="tranDate != null">
+                #{tranDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="serviceFee != null">
+                #{serviceFee,jdbcType=DECIMAL},
+            </if>
+            <if test="serviceFeeReturn != null">
+                #{serviceFeeReturn,jdbcType=DECIMAL},
+            </if>
+            <if test="accountCode != null">
+                #{accountCode,jdbcType=VARCHAR},
+            </if>
+            <if test="refundType != null">
+                #{refundType,jdbcType=VARCHAR},
+            </if>
+            <if test="refundTypeValue != null">
+                #{refundTypeValue,jdbcType=VARCHAR},
+            </if>
+            <if test="payChannel != null">
+                #{payChannel,jdbcType=VARCHAR},
+            </if>
+            <if test="payChannelValue != null">
+                #{payChannelValue,jdbcType=VARCHAR},
+            </if>
+            <if test="isInvoice != null">
+                #{isInvoice,jdbcType=CHAR},
+            </if>
+            <if test="isMakeInvoice != null">
+                #{isMakeInvoice,jdbcType=CHAR},
+            </if>
+            <if test="errorSerialNo != null">
+                #{errorSerialNo,jdbcType=VARCHAR},
+            </if>
+            <if test="errorReason != null">
+                #{errorReason,jdbcType=VARCHAR},
+            </if>
+            <if test="checkStatus != null">
+                #{checkStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="checkStatusValue != null">
+                #{checkStatusValue,jdbcType=VARCHAR},
+            </if>
+            <if test="checkTime != null">
+                #{checkTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="credenceCategory != null">
+                #{credenceCategory,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceCategoryValue != null">
+                #{credenceCategoryValue,jdbcType=VARCHAR},
+            </if>
+            <if test="isCancel != null">
+                #{isCancel,jdbcType=CHAR},
+            </if>
+            <if test="cancelTime != null">
+                #{cancelTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isTransfer != null">
+                #{isTransfer,jdbcType=VARCHAR},
+            </if>
+            <if test="transferTime != null">
+                #{transferTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isCompensation != null">
+                #{isCompensation,jdbcType=VARCHAR},
+            </if>
+            <if test="bankCode != null">
+                #{bankCode,jdbcType=VARCHAR},
+            </if>
+            <if test="pfBonusPayMoney != null">
+                #{pfBonusPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="pfBonusCodes != null">
+                #{pfBonusCodes,jdbcType=VARCHAR},
+            </if>
+            <if test="subsidyPayMoney != null">
+                #{subsidyPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="isRefund != null">
+                #{isRefund,jdbcType=CHAR},
+            </if>
+            <if test="refundTime != null">
+                #{refundTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="interestPayMoney != null">
+                #{interestPayMoney,jdbcType=DECIMAL},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.qiqilab.entity.Credence">
+        update credence
+        <set>
+            <if test="version != null">
+                version = #{version,jdbcType=INTEGER},
+            </if>
+            <if test="code != null">
+                code = #{code,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceName != null">
+                credence_name = #{credenceName,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceType != null">
+                credence_type = #{credenceType,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceTypeValue != null">
+                credence_type_value = #{credenceTypeValue,jdbcType=VARCHAR},
+            </if>
+            <if test="shopCode != null">
+                shop_code = #{shopCode,jdbcType=VARCHAR},
+            </if>
+            <if test="shopName != null">
+                shop_name = #{shopName,jdbcType=VARCHAR},
+            </if>
+            <if test="headShopCode != null">
+                head_shop_code = #{headShopCode,jdbcType=VARCHAR},
+            </if>
+            <if test="shopId != null">
+                shop_id = #{shopId,jdbcType=BIGINT},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="amount != null">
+                amount = #{amount,jdbcType=DECIMAL},
+            </if>
+            <if test="scoreAmount != null">
+                score_amount = #{scoreAmount,jdbcType=INTEGER},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=BIGINT},
+            </if>
+            <if test="userName != null">
+                user_name = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="userCode != null">
+                user_code = #{userCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cashierUserId != null">
+                cashier_user_id = #{cashierUserId,jdbcType=BIGINT},
+            </if>
+            <if test="cashierUserCode != null">
+                cashier_user_code = #{cashierUserCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cashierUserName != null">
+                cashier_user_name = #{cashierUserName,jdbcType=VARCHAR},
+            </if>
+            <if test="cashierTelephone != null">
+                cashier_telephone = #{cashierTelephone,jdbcType=VARCHAR},
+            </if>
+            <if test="consumeCode != null">
+                consume_code = #{consumeCode,jdbcType=VARCHAR},
+            </if>
+            <if test="cashPayMoney != null">
+                cash_pay_money = #{cashPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="scorePayMoney != null">
+                score_pay_money = #{scorePayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="bonusPayMoney != null">
+                bonus_pay_money = #{bonusPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="virtualPayMoney != null">
+                virtual_pay_money = #{virtualPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="payScore != null">
+                pay_score = #{payScore,jdbcType=INTEGER},
+            </if>
+            <if test="payBonusCodes != null">
+                pay_bonus_codes = #{payBonusCodes,jdbcType=VARCHAR},
+            </if>
+            <if test="scoreBankCode != null">
+                score_bank_code = #{scoreBankCode,jdbcType=VARCHAR},
+            </if>
+            <if test="num != null">
+                num = #{num,jdbcType=INTEGER},
+            </if>
+            <if test="payTime != null">
+                pay_time = #{payTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="deleteTime != null">
+                delete_time = #{deleteTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="vaccountCode != null">
+                vaccount_code = #{vaccountCode,jdbcType=VARCHAR},
+            </if>
+            <if test="checkValue != null">
+                check_value = #{checkValue,jdbcType=VARCHAR},
+            </if>
+            <if test="tradeNo != null">
+                trade_no = #{tradeNo,jdbcType=VARCHAR},
+            </if>
+            <if test="tranDate != null">
+                tran_date = #{tranDate,jdbcType=TIMESTAMP},
+            </if>
+            <if test="serviceFee != null">
+                service_fee = #{serviceFee,jdbcType=DECIMAL},
+            </if>
+            <if test="serviceFeeReturn != null">
+                service_fee_return = #{serviceFeeReturn,jdbcType=DECIMAL},
+            </if>
+            <if test="accountCode != null">
+                account_code = #{accountCode,jdbcType=VARCHAR},
+            </if>
+            <if test="refundType != null">
+                refund_type = #{refundType,jdbcType=VARCHAR},
+            </if>
+            <if test="refundTypeValue != null">
+                refund_type_value = #{refundTypeValue,jdbcType=VARCHAR},
+            </if>
+            <if test="payChannel != null">
+                pay_channel = #{payChannel,jdbcType=VARCHAR},
+            </if>
+            <if test="payChannelValue != null">
+                pay_channel_value = #{payChannelValue,jdbcType=VARCHAR},
+            </if>
+            <if test="isInvoice != null">
+                is_invoice = #{isInvoice,jdbcType=CHAR},
+            </if>
+            <if test="isMakeInvoice != null">
+                is_make_invoice = #{isMakeInvoice,jdbcType=CHAR},
+            </if>
+            <if test="errorSerialNo != null">
+                error_serial_no = #{errorSerialNo,jdbcType=VARCHAR},
+            </if>
+            <if test="errorReason != null">
+                error_reason = #{errorReason,jdbcType=VARCHAR},
+            </if>
+            <if test="checkStatus != null">
+                check_status = #{checkStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="checkStatusValue != null">
+                check_status_value = #{checkStatusValue,jdbcType=VARCHAR},
+            </if>
+            <if test="checkTime != null">
+                check_time = #{checkTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="credenceCategory != null">
+                credence_category = #{credenceCategory,jdbcType=VARCHAR},
+            </if>
+            <if test="credenceCategoryValue != null">
+                credence_category_value = #{credenceCategoryValue,jdbcType=VARCHAR},
+            </if>
+            <if test="isCancel != null">
+                is_cancel = #{isCancel,jdbcType=CHAR},
+            </if>
+            <if test="cancelTime != null">
+                cancel_time = #{cancelTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isTransfer != null">
+                is_transfer = #{isTransfer,jdbcType=VARCHAR},
+            </if>
+            <if test="transferTime != null">
+                transfer_time = #{transferTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isCompensation != null">
+                is_compensation = #{isCompensation,jdbcType=VARCHAR},
+            </if>
+            <if test="bankCode != null">
+                bank_code = #{bankCode,jdbcType=VARCHAR},
+            </if>
+            <if test="pfBonusPayMoney != null">
+                pf_bonus_pay_money = #{pfBonusPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="pfBonusCodes != null">
+                pf_bonus_codes = #{pfBonusCodes,jdbcType=VARCHAR},
+            </if>
+            <if test="subsidyPayMoney != null">
+                subsidy_pay_money = #{subsidyPayMoney,jdbcType=DECIMAL},
+            </if>
+            <if test="isRefund != null">
+                is_refund = #{isRefund,jdbcType=CHAR},
+            </if>
+            <if test="refundTime != null">
+                refund_time = #{refundTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="interestPayMoney != null">
+                interest_pay_money = #{interestPayMoney,jdbcType=DECIMAL},
+            </if>
+        </set>
+        where id = #{id,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.qiqilab.entity.Credence">
+    update credence
+    set version = #{version,jdbcType=INTEGER},
+      code = #{code,jdbcType=VARCHAR},
+      credence_name = #{credenceName,jdbcType=VARCHAR},
+      credence_type = #{credenceType,jdbcType=VARCHAR},
+      credence_type_value = #{credenceTypeValue,jdbcType=VARCHAR},
+      shop_code = #{shopCode,jdbcType=VARCHAR},
+      shop_name = #{shopName,jdbcType=VARCHAR},
+      head_shop_code = #{headShopCode,jdbcType=VARCHAR},
+      shop_id = #{shopId,jdbcType=BIGINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      amount = #{amount,jdbcType=DECIMAL},
+      score_amount = #{scoreAmount,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=BIGINT},
+      user_name = #{userName,jdbcType=VARCHAR},
+      user_code = #{userCode,jdbcType=VARCHAR},
+      cashier_user_id = #{cashierUserId,jdbcType=BIGINT},
+      cashier_user_code = #{cashierUserCode,jdbcType=VARCHAR},
+      cashier_user_name = #{cashierUserName,jdbcType=VARCHAR},
+      cashier_telephone = #{cashierTelephone,jdbcType=VARCHAR},
+      consume_code = #{consumeCode,jdbcType=VARCHAR},
+      cash_pay_money = #{cashPayMoney,jdbcType=DECIMAL},
+      score_pay_money = #{scorePayMoney,jdbcType=DECIMAL},
+      bonus_pay_money = #{bonusPayMoney,jdbcType=DECIMAL},
+      virtual_pay_money = #{virtualPayMoney,jdbcType=DECIMAL},
+      pay_score = #{payScore,jdbcType=INTEGER},
+      pay_bonus_codes = #{payBonusCodes,jdbcType=VARCHAR},
+      score_bank_code = #{scoreBankCode,jdbcType=VARCHAR},
+      num = #{num,jdbcType=INTEGER},
+      pay_time = #{payTime,jdbcType=TIMESTAMP},
+      delete_time = #{deleteTime,jdbcType=TIMESTAMP},
+      vaccount_code = #{vaccountCode,jdbcType=VARCHAR},
+      check_value = #{checkValue,jdbcType=VARCHAR},
+      trade_no = #{tradeNo,jdbcType=VARCHAR},
+      tran_date = #{tranDate,jdbcType=TIMESTAMP},
+      service_fee = #{serviceFee,jdbcType=DECIMAL},
+      service_fee_return = #{serviceFeeReturn,jdbcType=DECIMAL},
+      account_code = #{accountCode,jdbcType=VARCHAR},
+      refund_type = #{refundType,jdbcType=VARCHAR},
+      refund_type_value = #{refundTypeValue,jdbcType=VARCHAR},
+      pay_channel = #{payChannel,jdbcType=VARCHAR},
+      pay_channel_value = #{payChannelValue,jdbcType=VARCHAR},
+      is_invoice = #{isInvoice,jdbcType=CHAR},
+      is_make_invoice = #{isMakeInvoice,jdbcType=CHAR},
+      error_serial_no = #{errorSerialNo,jdbcType=VARCHAR},
+      error_reason = #{errorReason,jdbcType=VARCHAR},
+      check_status = #{checkStatus,jdbcType=VARCHAR},
+      check_status_value = #{checkStatusValue,jdbcType=VARCHAR},
+      check_time = #{checkTime,jdbcType=TIMESTAMP},
+      credence_category = #{credenceCategory,jdbcType=VARCHAR},
+      credence_category_value = #{credenceCategoryValue,jdbcType=VARCHAR},
+      is_cancel = #{isCancel,jdbcType=CHAR},
+      cancel_time = #{cancelTime,jdbcType=TIMESTAMP},
+      is_transfer = #{isTransfer,jdbcType=VARCHAR},
+      transfer_time = #{transferTime,jdbcType=TIMESTAMP},
+      is_compensation = #{isCompensation,jdbcType=VARCHAR},
+      bank_code = #{bankCode,jdbcType=VARCHAR},
+      pf_bonus_pay_money = #{pfBonusPayMoney,jdbcType=DECIMAL},
+      pf_bonus_codes = #{pfBonusCodes,jdbcType=VARCHAR},
+      subsidy_pay_money = #{subsidyPayMoney,jdbcType=DECIMAL},
+      is_refund = #{isRefund,jdbcType=CHAR},
+      refund_time = #{refundTime,jdbcType=TIMESTAMP},
+      interest_pay_money = #{interestPayMoney,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+
+    <select id="selectByPage" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from credence
+    </select>
+</mapper>

@@ -1,0 +1,5 @@
+com\qiqilab\kafka\producer\CredenceProducer$2.class
+com\qiqilab\kafka\consumer\CredenceConsumer.class
+com\qiqilab\kafka\producer\CredenceProducer$1.class
+com\qiqilab\kafka\producer\CredenceProducer.class
+com\qiqilab\kafka\config\KafkaProducerConfig.class

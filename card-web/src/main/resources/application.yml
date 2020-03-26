@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+  thymeleaf:
+    mode: HTML5
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+server:
+  servlet:
+    context-path: /
+  port: 8081
+
+
+
+mybatis:
+  mapper-locations: classpath:mybatis/*Mapper.xml
+  type-aliases-package: com.qiqilab.entity

@@ -7,7 +7,7 @@ import com.google.gson.GsonBuilder;
 import com.qiqilab.entity.Credence;
 import com.qiqilab.entity.Employee;
 import com.qiqilab.exception.EmployeeNotExistException;
-import com.qiqilab.kafka.producer.CredenceProducer;
+//import com.qiqilab.kafka.producer.CredenceProducer;
 import com.qiqilab.service.CredenceService;
 import com.qiqilab.service.HelloService;
 import com.qiqilab.service.IDService;
@@ -35,8 +35,8 @@ public class HelloController {
     @Autowired
     IDService idService;
 
-    @Autowired
-    CredenceProducer credenceProducer;
+//    @Autowired
+//    CredenceProducer credenceProducer;
 
     @Autowired
     CredenceService credenceService;
@@ -52,7 +52,7 @@ public class HelloController {
             PageInfo page = new PageInfo(credenceList);
             for (Credence credence : credenceList) {
                 String message = gson.toJson(credence);
-                credenceProducer.sendMessage("yinshan_credence_4", message);
+//                credenceProducer.sendMessage("yinshan_credence_4", message);
             }
             hasNextPage = page.isHasNextPage();
         }
@@ -73,6 +73,12 @@ public class HelloController {
         employee.setId(Integer.parseInt(idService.getNextID()));
         helloService.saveEmployee(employee);
         return employee;
+    }
+
+    @GetMapping("/")
+    public String index() {
+
+        return "success";
     }
 
 }

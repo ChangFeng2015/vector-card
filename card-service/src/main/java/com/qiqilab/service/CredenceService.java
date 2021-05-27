@@ -7,4 +7,6 @@ import java.util.List;
 public interface CredenceService {
 
     List<Credence> selectByPage();
+
+    int insertSelective(Credence record);
 }

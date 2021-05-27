@@ -82,15 +82,15 @@
     <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from credence
+        from hoyi_credence
         where id = #{id,jdbcType=BIGINT}
     </select>
     <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
-    delete from credence
+    delete from hoyi_credence
     where id = #{id,jdbcType=BIGINT}
   </delete>
     <insert id="insert" parameterType="com.qiqilab.entity.Credence">
-    insert into credence (id, version, code, 
+    insert into hoyi_credence (id, version, code,
       credence_name, credence_type, credence_type_value, 
       shop_code, shop_name, head_shop_code, 
       shop_id, create_time, amount, 
@@ -136,7 +136,7 @@
       )
   </insert>
     <insert id="insertSelective" parameterType="com.qiqilab.entity.Credence">
-        insert into credence
+        insert into hoyi_credence
         <trim prefix="(" suffix=")" suffixOverrides=",">
             <if test="id != null">
                 id,
@@ -521,7 +521,7 @@
         </trim>
     </insert>
     <update id="updateByPrimaryKeySelective" parameterType="com.qiqilab.entity.Credence">
-        update credence
+        update hoyi_credence
         <set>
             <if test="version != null">
                 version = #{version,jdbcType=INTEGER},
@@ -713,7 +713,7 @@
         where id = #{id,jdbcType=BIGINT}
     </update>
     <update id="updateByPrimaryKey" parameterType="com.qiqilab.entity.Credence">
-    update credence
+    update hoyi_credence
     set version = #{version,jdbcType=INTEGER},
       code = #{code,jdbcType=VARCHAR},
       credence_name = #{credenceName,jdbcType=VARCHAR},
@@ -782,6 +782,6 @@
     <select id="selectByPage" resultMap="BaseResultMap">
         select
         <include refid="Base_Column_List"/>
-        from credence
+        from hoyi_credence
     </select>
 </mapper>
